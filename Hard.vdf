@@ -74,7 +74,33 @@
         //    sniper
         //    fn57
         //    elites
-
+	
+	// - extra --------------------------------------------
+        "cs_747"
+        {
+            "bots"        "Ben Eddie Kent Rooster Roger Sam Alex Jake Maverick"
+            "minEnemies"  "7"
+            "threshold"   "26"
+            "tasks"       "'kill 10' 'winfast 85'"
+            "FriendlyFire"  "1"
+        }
+        "as_oilrig"
+        {
+            "bots"        "Ben Eddie Kent Rooster Roger Maverick Alex Jake"
+            "minEnemies"  "8"
+            "threshold"   "26"
+            "tasks"       "'kill 9' 'killwith 4 m4a1' 'killwith 2 deagle'"
+            "FriendlyFire"  "1"
+        }
+        "de_vostok_cz"
+        {
+            "bots"        "Ben Eddie Kent Rooster Roger Sam Alex Jake Tex"
+            "minEnemies"  "8"
+            "threshold"   "26"
+            "tasks"       "'kill 11' 'kill 3 with aug' 'winfast 70'"
+            "FriendlyFire"  "1"
+	}
+	
         // - start ------------------------------------------
         "de_dust_cz"
         {
@@ -230,32 +256,6 @@
             "tasks"       "'kill 18' 'winfast 70'"
             "FriendlyFire"  "1"
         }
-	
-	// - extra --------------------------------------------
-        "cs_747"
-        {
-            "bots"        "Ben Eddie Kent Rooster Roger Sam Alex Jake Maverick"
-            "minEnemies"  "7"
-            "threshold"   "26"
-            "tasks"       "'kill 15' 'winfast 65'"
-            "FriendlyFire"  "1"
-        }
-        "as_oilrig"
-        {
-            "bots"        "Ben Eddie Kent Rooster Roger Maverick Alex Jake"
-            "minEnemies"  "8"
-            "threshold"   "26"
-            "tasks"       "'kill 18' 'killwith 4 m4a1' 'killwith 2 deagle'"
-            "FriendlyFire"  "1"
-        }
-        "de_vostok_cz"
-        {
-            "bots"        "Ben Eddie Kent Rooster Roger Sam Alex Jake Tex"
-            "minEnemies"  "8"
-            "threshold"   "26"
-            "tasks"       "'kill 18' 'kill 3 with aug' 'winfast 70'"
-            "FriendlyFire"  "1"
-	}
     }
 }
  
