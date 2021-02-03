@@ -619,12 +619,11 @@ End
 Dewa Salman
 	Cost = 1
 	WeaponPreference = m4a1
-	WeaponPreference = awp
 	WeaponPreference = p90
 	WeaponPreference = deagle
 	Teamwork = 100
 	Aggression = 95
-	Skin = 4
+	Skin = 3
 	VoicePitch = 80
 End
 
