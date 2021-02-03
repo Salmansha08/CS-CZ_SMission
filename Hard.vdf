@@ -3,7 +3,7 @@
     "InitialPoints"             "12"
     "MatchWins"                 "4"
     "MatchWinBy"                "2"
-    "Characters"                "Weasel Lunatic Crackpot Outcast Marvin Reaper Rat Screech Fred Pawn Splinter Freak Maniac Nutcase Rebel Fiend Vandal Crimson Deadshot Bloodhound Cutthroat Chaos Blade Nails Grump Torn Fanatic Titan Slug Viper Grim Hyena Wolf Panther Crow Brois Makarov Jackal Hawk Spider Snake Terminator Boris Fumbles Jan"
+    "Characters"                "Salman Weasel Lunatic Crackpot Outcast Marvin Reaper Rat Screech Fred Pawn Splinter Freak Maniac Nutcase Rebel Fiend Vandal Crimson Deadshot Bloodhound Cutthroat Chaos Blade Nails Grump Torn Fanatic Titan Slug Viper Grim Hyena Wolf Panther Crow Brois Makarov Jackal Hawk Spider Snake Terminator Boris Fumbles Jan"
 
     // CostAvailability: for each bot point cost, specify the number of reputation points needed to hire him.
     // If a value is not present or 0, that cost and higher are assumed to be always available.
