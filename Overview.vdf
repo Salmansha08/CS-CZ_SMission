@@ -1,8 +1,8 @@
 "Tour of Destruction"
 {
-  "Author"      "TheMrGhostman"
-  "Title"       "Tour To Destruction (Hard Mode)"
-  "Description" "Was the Tour To Destruction campaigns too easy for ya? Try this one for a true challenge! No mercy? No problem!"
+  "Author"      "Salmansha08"
+  "Title"       "CS-CZ-SMission"
+  "Description" "Sok dicoba aja gaes"
   "SoloPlay"	"1"
   "CoopPlay"	"0"
   "Team"	"T"
@@ -10,6 +10,6 @@
   "BGColor2"	"0 0 0"
   "TextColor"	"255 255 255"
 
-  "BotProfile"  "BotTHMProfile.db"
+  "BotProfile"  "BotSProfile.db"
 }
  
