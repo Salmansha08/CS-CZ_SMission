@@ -90,7 +90,7 @@
             "threshold"   "99"
             "tasks"       "'killwith 2 SMG' 'winfast 75'"
         }
-        "de_rotterdam"
+        "de_giza_b4"
         {
             "bots"        "Morris Vern Gray Floyd"
             "minEnemies"  "4"
