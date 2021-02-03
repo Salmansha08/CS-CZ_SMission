@@ -1,0 +1,15 @@
+"Tour of Destruction"
+{
+  "Author"      "TheMrGhostman"
+  "Title"       "Tour To Destruction (Hard Mode)"
+  "Description" "Was the Tour To Destruction campaigns too easy for ya? Try this one for a true challenge! No mercy? No problem!"
+  "SoloPlay"	"1"
+  "CoopPlay"	"0"
+  "Team"	"T"
+  "BGColor1"	"47 62 90"
+  "BGColor2"	"0 0 0"
+  "TextColor"	"255 255 255"
+
+  "BotProfile"  "BotTHMProfile.db"
+}
+ 

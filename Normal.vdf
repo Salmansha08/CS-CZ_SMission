@@ -1,0 +1,217 @@
+"CareerGame"
+{
+    "InitialPoints"             "4"
+    "MatchWins"                 "3"
+    "MatchWinBy"                "2"
+    "Characters"                "Weasel Lunatic Crackpot Outcast Madman Rat Screech Worm Splinter Freak Maniac Psycho Rebel Fiend Vandal Razor Bandit Raider Blade Nails Hammer Crank Cutter Fanatic Hyena Wolfhound Panther Crow Jackal Hawk Spider Snake"
+
+	// CostAvailability: for each bot point cost, specify the number of reputation points needed to hire him.
+	// If a value is not present or 0, that cost and higher are assumed to be always available.
+	"CostAvailability"
+	{
+		"1"						"1"
+		"2"						"1"
+		"3"						"7"
+		"4"						"15"
+		"5"						"15"
+	}
+
+    "Maps"
+    {
+        // Maps are in triplets
+        // 'minEnemies' defines the minimum number of enemies of the map (from the 'bots' entry, left to right)
+        // 'threshold' defines the Reputation Point value above which one enemy is added for every additional RP until we run out of bots on the 'bots' line
+
+        // A note on tasks:
+        //
+        // tasks are one of the following:
+        //    kill         <N> [survive | inarow]
+        //    killwith     <N> <weapon> [survive | inarow]
+        //    killblind    <N> [survive | inarow]
+        //    winfast      <S> [survive | inarow]
+        //    headshot     <N> [survive | inarow]
+        //    headshotwith <N> <weapon> [survive | inarow]
+        //    killall
+        //    rescue       <N> [survive | inarow]
+        //    rescue 4
+        //    injure       <N> [survive | inarow]
+        //    injurewith   <N> <weapon> [survive | inarow]
+        //
+        // tasks can contain a numeric value (# of kills, # of seconds, etc)
+        // tasks can contain a weapon name or weapon classname (for the killwith and headshotwith tasks)
+        // you can add "survive" so the player must survive to the end of the round to complete the task
+        // you can add "inarow" so the player must complete the task N times without dying (across round boundaries)
+        // group words of a task with '.  I.e. 'kill 3'
+        //
+        // Weapon names/classes are:
+        //    scout
+        //    xm1014
+        //    mac10
+        //    aug
+        //    ump45
+        //    sg550
+        //    galil
+        //    famas
+        //    awp
+        //    mp5
+        //    m249
+        //    m3
+        //    m4a1
+        //    tmp
+        //    sg552
+        //    ak47
+        //    p90
+        //    shield
+        //    weapon
+        //    knife
+        //    grenade (text is singular)
+        //    hegren  (text is plural, but the behavior is the same)
+        //    pistol
+        //    SMG
+        //    machinegun
+        //    shotgun
+        //    rifle
+        //    sniper
+        //    fn57
+        //    elites
+
+        // - start ------------------------------------------
+        "de_dust_cz"
+        {
+            "bots"        "Ben Vern Kent Kenny Phil"
+            "minEnemies"  "4"
+            "threshold"   "7"
+            "tasks"       "'kill 2 survive' 'winfast 65' 'plant 1 survive'"
+        }
+        "cs_office_cz"
+        {
+            "bots"        "Ben Vern Kent Kenny Phil Leon Eddie"
+            "minEnemies"  "4"
+            "threshold"   "7"
+            "tasks"       "'kill 5' 'killwith 2 p90' 'defendhostages 1 survive'"
+        }
+        "de_prodigy_cz"
+        {
+            "bots"        "Ben Vern Kent Kenny Phil Leon Eddie"
+            "minEnemies"  "4"
+            "threshold"   "7"
+            "tasks"       "'kill 5' 'killwith 2 galil' 'winfast 65' 'preventdefuse 1 survive'"
+        }
+
+        // - early -------------------------------------------
+        "de_tides_cz"
+        {
+            "bots"        "Ben Vern Kent Kenny Phil Leon Eddie"
+            "minEnemies"  "5"
+            "threshold"   "9"
+            "tasks"       "'kill 5' 'killwith 2 ak47 survive' 'winfast 65'"
+        }
+        "cs_italy_cz"
+        {
+            "bots"        "Ben Vern Kent Kenny Phil Leon Eddie"
+            "minEnemies"  "5"
+            "threshold"   "10"
+            "tasks"       "'kill 5' 'killwith 2 awp survive' 'defendhostages 1 survive'"
+        }
+        "de_inferno_cz"
+        {
+            "bots"        "Ben Vern Kent Kenny Phil Leon Eddie Gus"
+            "minEnemies"  "5"
+            "threshold"   "10"
+            "tasks"       "'kill 5' 'killwith 2 sg552' 'killwith 2 deagle'"
+        }
+
+        // - halfway -----------------------------------------
+        "de_dust2_cz"
+        {
+            "bots"        "Ben Vern Kent Kenny Phil Leon Eddie Gus"
+            "minEnemies"  "6"
+            "threshold"   "13"
+            "tasks"       "'kill 8' 'killwith 2 g3sg1 survive' 'winfast 65'"
+        }
+        "cs_militia_cz"
+        {
+            "bots"        "Ben Vern Kent Kenny Phil Leon Eddie Gus"
+            "minEnemies"  "6"
+            "threshold"   "13"
+            "tasks"       "'defendhostages 1 survive' 'killwith 4 mp5' 'winfast 65'"
+        }
+        "de_stadium_cz"
+        {
+            "bots"        "Ben Vern Kent Kenny Phil Leon Eddie Gus"
+            "minEnemies"  "6"
+            "threshold"   "13"
+            "tasks"       "'killwith 3 sg552' 'winfast 65 survive'"
+        }
+
+        // - halfway ----------------------------------------
+        "de_chateau_cz"
+        {
+            "bots"        "Ben Vern Kent Kenny Phil Cole Oscar Rooster"
+            "minEnemies"  "6"
+            "threshold"   "17"
+            "tasks"       "'kill 8' 'killwith 4 ak47' 'preventdefuse 1'"
+        }
+        "cs_havana_cz"
+        {
+            "bots"        "Ben Vern Kent Kenny Phil Cole Oscar Rooster"
+            "minEnemies"  "6"
+            "threshold"   "17"
+            "tasks"       "'winfast 65 survive' 'defendhostages 1 survive'"
+        }
+        "de_cbble_cz"
+        {
+            "bots"        "Ben Vern Kent Kenny Phil Cole Oscar Rooster"
+            "minEnemies"  "6"
+            "threshold"   "17"
+            "tasks"       "'kill 12'"
+        }
+
+        // - late -------------------------------------------
+        "de_aztec_cz"
+        {
+            "bots"        "Ben Vern Kent Kenny Cole Oscar Rooster Jake"
+            "minEnemies"  "7"
+            "threshold"   "19"
+            "tasks"       "'preventdefuse 1 survive' 'killwith 4 awp' 'winfast 65'"
+        }
+        "cs_downed_cz"
+        {
+            "bots"        "Ben Vern Kent Kenny Cole Oscar Rooster Jake"
+            "minEnemies"  "7"
+            "threshold"   "19"
+            "tasks"       "'kill 10' 'defendhostages 1 survive'"
+        }
+        "de_airstrip_cz"
+        {
+            "bots"        "Ben Vern Kent Kenny Cole Oscar Rooster Jake"
+            "minEnemies"  "7"
+            "threshold"   "19"
+            "tasks"       "'killwith 4 ak47' 'preventdefuse 1' 'winfast 65'"
+        }
+
+        // - end --------------------------------------------
+        "de_piranesi_cz"
+        {
+            "bots"        "Ben Vern Kent Kenny Cole Oscar Rooster Jake Ray"
+            "minEnemies"  "7"
+            "threshold"   "22"
+            "tasks"       "'plant 2' 'killwith 4 awp' 'winfast 75 survive'"
+        }
+        "de_fastline_cz"
+        {
+            "bots"        "Ben Vern Kent Kenny Cole Oscar Rooster Jake Ray"
+            "minEnemies"  "7"
+            "threshold"   "22"
+            "tasks"       "'kill 12' 'headshotwith 2 awp' 'plant 1 survive'"
+        }
+        "de_torn_cz"
+        {
+            "bots"        "Ben Vern Kent Kenny Cole Oscar Rooster Jake Ray"
+            "minEnemies"  "7"
+            "threshold"   "22"
+            "tasks"       "'killwith 4 awp' 'plant 2' 'preventdefuse 1 survive'"
+        }
+    }
+}
+ 

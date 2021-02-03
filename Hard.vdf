@@ -1,0 +1,235 @@
+"CareerGame"
+{
+    "InitialPoints"             "8"
+    "MatchWins"                 "4"
+    "MatchWinBy"                "2"
+    "Characters"                "Weasel Lunatic Crackpot Outcast Madman Rat Screech Worm Splinter Freak Maniac Psycho Rebel Fiend Vandal Razor Bandit Raider Blade Nails Hammer Crank Cutter Fanatic Hyena Wolfhound Panther Crow Jackal Hawk Spider Snake"
+
+    // CostAvailability: for each bot point cost, specify the number of reputation points needed to hire him.
+    // If a value is not present or 0, that cost and higher are assumed to be always available.
+    "CostAvailability"
+    {
+	"1"						"1"
+	"2"						"1"
+	"3"						"1"
+	"4"						"14"
+	"5"						"14"
+    }
+
+   "Maps"
+    {
+        // Maps are in triplets
+        // 'minEnemies' defines the minimum number of enemies of the map (from the 'bots' entry, left to right)
+        // 'threshold' defines the Reputation Point value above which one enemy is added for every additional RP until we run out of bots on the 'bots' line
+
+        // A note on tasks:
+        //
+        // tasks are one of the following:
+        //    kill         <N> [survive | inarow]
+        //    killwith     <N> <weapon> [survive | inarow]
+        //    killblind    <N> [survive | inarow]
+        //    winfast      <S> [survive | inarow]
+        //    headshot     <N> [survive | inarow]
+        //    headshotwith <N> <weapon> [survive | inarow]
+        //    killall
+        //    rescue       <N> [survive | inarow]
+        //    rescueall
+        //    injure       <N> [survive | inarow]
+        //    injurewith   <N> <weapon> [survive | inarow]
+        //
+        // tasks can contain a numeric value (# of kills, # of seconds, etc)
+        // tasks can contain a weapon name or weapon classname (for the killwith and headshotwith tasks)
+        // you can add "survive" so the player must survive to the end of the round to complete the task
+        // you can add "inarow" so the player must complete the task N times without dying (across round boundaries)
+        // group words of a task with '.  I.e. 'kill 3'
+        //
+        // Weapon names/classes are:
+        //    scout
+        //    xm1014
+        //    mac10
+        //    aug
+        //    ump45
+        //    sg550
+        //    galil
+        //    famas
+        //    awp
+        //    mp5
+        //    m249
+        //    m3
+        //    m4a1
+        //    tmp
+        //    sg552
+        //    ak47
+        //    p90
+        //    shield
+        //    weapon
+        //    knife
+        //    grenade (text is singular)
+        //    hegren  (text is plural, but the behavior is the same)
+        //    pistol
+        //    SMG
+        //    machinegun
+        //    shotgun
+        //    rifle
+        //    sniper
+        //    fn57
+        //    elites
+
+        // - start ------------------------------------------
+        "de_dust_cz"
+        {
+            "bots"        "Ben Eddie Kent Oscar Roger Cole"
+            "minEnemies"  "5"
+            "threshold"   "11"
+            "tasks"       "'killwith 2 galil inarow' 'killblind 2' 'winfast 60 survive'"
+            "FriendlyFire"  "1"
+        }
+        "cs_office_cz"
+        {
+            "bots"        "Ben Eddie Kent Oscar Roger Cole"
+            "minEnemies"  "5"
+            "threshold"   "11"
+            "tasks"       "'winfast 65' 'killwith 2 ak47 survive' 'defendhostages 2'"
+            "FriendlyFire"  "1"
+        }
+        "de_prodigy_cz"
+        {
+            "bots"        "Ben Eddie Kent Oscar Roger Cole"
+            "minEnemies"  "5"
+            "threshold"   "11"
+            "tasks"       "'plant 1 survive' 'killwith 2 ak47 survive' 'winfast 60'"
+            "FriendlyFire"  "1"
+        }
+
+        // - early -------------------------------------------
+        "de_tides_cz"
+        {
+            "bots"        "Ben Eddie Kent Oscar Roger Cole Larry Ray"
+            "minEnemies"  "6"
+            "threshold"   "15"
+            "tasks"       "'preventdefuse 1' 'killwith 2 m4a1' 'winfast 60'"
+            "FriendlyFire"  "1"
+        }
+        "cs_italy_cz"
+        {
+            "bots"        "Ben Eddie Kent Oscar Roger Cole Larry Ray"
+            "minEnemies"  "6"
+            "threshold"   "15"
+            "tasks"       "'killblind 1 survive' 'killwith 2 awp' 'defendhostages 2'"
+            "FriendlyFire"  "1"
+        }
+        "de_inferno_cz"
+        {
+            "bots"        "Ben Eddie Kent Oscar Roger Cole Larry Ray"
+            "minEnemies"  "6"
+            "threshold"   "15"
+            "tasks"       "'kill 12' 'plant 1 survive'"
+            "FriendlyFire"  "1"
+        }
+
+        // - halfway ----------------------------------------
+        "de_dust2_cz"
+        {
+            "bots"        "Ben Eddie Kent Oscar Roger Cole Larry Ray"
+            "minEnemies"  "7"
+            "threshold"   "19"
+            "tasks"       "'preventdefuse 2' 'killwith 2 g3sg1 inarow' 'winfast 65 survive'"
+            "FriendlyFire"  "1"
+        }
+        "cs_militia_cz"
+        {
+            "bots"        "Ben Eddie Kent Oscar Roger Cole Larry Ray"
+            "minEnemies"  "7"
+            "threshold"   "19"
+            "tasks"       "'winfast 50' 'defendhostages 1 survive'"
+            "FriendlyFire"  "1"
+        }
+        "de_stadium_cz"
+        {
+            "bots"        "Ben Eddie Kent Oscar Roger Cole Larry Ray"
+            "minEnemies"  "7"
+            "threshold"   "19"
+            "tasks"       "'preventdefuse 1' 'killwith 4 m4a1' 'winfast 60 survive'"
+            "FriendlyFire"  "1"
+        }
+
+        // - halfway ----------------------------------------
+        "de_chateau_cz"
+        {
+            "bots"        "Ben Eddie Kent Rooster Roger Sam Alex Jake"
+            "minEnemies"  "7"
+            "threshold"   "22"
+            "tasks"       "'kill 15' 'plant 3'"
+            "FriendlyFire"  "1"
+        }
+        "cs_havana_cz"
+        {
+            "bots"        "Ben Eddie Kent Rooster Roger Sam Alex Jake"
+            "minEnemies"  "7"
+            "threshold"   "22"
+            "tasks"       "'killblind 3' 'defendhostages 1'"
+            "FriendlyFire"  "1"
+        }
+        "de_cbble_cz"
+        {
+            "bots"        "Ben Eddie Kent Rooster Roger Sam Alex Jake"
+            "minEnemies"  "7"
+            "threshold"   "22"
+            "tasks"       "'killwith 5 awp' 'winfast 65 survive' 'plant 1 survive'"
+            "FriendlyFire"  "1"
+        }
+
+        // - late -------------------------------------------
+        "de_aztec_cz"
+        {
+            "bots"        "Ben Eddie Kent Rooster Roger Sam Alex Jake"
+            "minEnemies"  "7"
+            "threshold"   "26"
+            "tasks"       "'kill 15'"
+            "FriendlyFire"  "1"
+        }
+        "cs_downed_cz"
+        {
+            "bots"        "Ben Eddie Kent Rooster Roger Sam Alex Jake"
+            "minEnemies"  "7"
+            "threshold"   "26"
+            "tasks"       "'killwith 4 galil' 'defendhostages 1 survive'"
+            "FriendlyFire"  "1"
+        }
+        "de_airstrip_cz"
+        {
+            "bots"        "Ben Eddie Kent Rooster Roger Sam Alex Jake"
+            "minEnemies"  "7"
+            "threshold"   "26"
+            "tasks"       "'plant 1 survive' 'preventdefuse 1' 'winfast 65'"
+            "FriendlyFire"  "1"
+        }
+
+        // - end --------------------------------------------
+        "de_piranesi_cz"
+        {
+            "bots"        "Ben Eddie Kent Rooster Roger Sam Alex Jake Maverick"
+            "minEnemies"  "7"
+            "threshold"   "26"
+            "tasks"       "'kill 18'"
+            "FriendlyFire"  "1"
+        }
+        "de_fastline_cz"
+        {
+            "bots"        "Ben Eddie Kent Rooster Roger Maverick Alex Jake"
+            "minEnemies"  "8"
+            "threshold"   "26"
+            "tasks"       "'plant 2' 'preventdefuse 1 survive'"
+            "FriendlyFire"  "1"
+        }
+        "de_torn_cz"
+        {
+            "bots"        "Ben Eddie Kent Rooster Roger Sam Alex Jake Tex"
+            "minEnemies"  "8"
+            "threshold"   "26"
+            "tasks"       "'kill 18' 'winfast 70'"
+            "FriendlyFire"  "1"
+        }
+    }
+}
+ 
