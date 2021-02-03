@@ -255,6 +255,7 @@
             "threshold"   "26"
             "tasks"       "'kill 18' 'kill 3 with aug' 'winfast 70'"
             "FriendlyFire"  "1"
+	}
     }
 }
  
