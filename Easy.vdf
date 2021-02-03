@@ -166,6 +166,30 @@
             "threshold"   "99"
             "tasks"       "'killwith 2 galil' 'winfast 90'"
         }
+	
+	// - halfway -----------------------------------------
+        "de_vostok_cz"
+        {
+            "bots"        "Graig Vern Gray Morris Yuri"
+            "minEnemies"  "5"
+            "threshold"   "99"
+            "tasks"       "'killwith 2 m4ai' 'winfast 80'"
+        }
+        "cs_sienna_cz"
+        {
+            "bots"        "Graig Vern Gray Morris Yuri"
+            "minEnemies"  "5"
+            "threshold"   "99"
+            "tasks"       "'killwith 2 sniper' 'kill 3'"
+        }
+        "cs_747"
+        {
+            "bots"        "Graig Vern Gray Morris Yuri"
+            "minEnemies"  "5"
+            "threshold"   "99"
+            "tasks"       "'killwith 2 aug' 'winfast 80'"
+        }
+
 
         // - halfway ----------------------------------------
         "de_chateau_cz"
