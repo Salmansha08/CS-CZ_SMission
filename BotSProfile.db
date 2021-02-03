@@ -93,13 +93,22 @@ End
 
 Template Spray
 	WeaponPreference = p90
-	WeaponPreference = tmp
-	WeaponPreference = mac10
 	WeaponPreference = mp5
+	WeaponPreference = mac10
+	WeaponPreference = tmp
 End
 
 
 // skill templates
+Template Dewa
+	Skill = 100
+	Aggression = 100
+	ReactionTime = 0.1
+	Cost = 1
+	Difficulty = EXPERT+HARD+NORMAL+EASY
+	VoicePitch = 80
+End
+
 Template Elite
 	Skill = 100
 	Aggression = 100
@@ -277,6 +286,16 @@ Normal Gus
 	VoicePitch = 107
 End
 
+Dewa Salman
+	Cost = 1
+	WeaponPreference = m4a1
+	WeaponPreference = awp
+	WeaponPreference = deagle
+	Teamwork = 90
+	Aggression = 90
+	Skin = 4
+	VoicePitch = 110
+End
 //-------------------------------------------
 // Cost 2
 
