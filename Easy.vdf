@@ -90,12 +90,12 @@
             "threshold"   "99"
             "tasks"       "'killwith 2 SMG' 'winfast 75'"
         }
-        "de_giza_b4"
+        "de_parking"
         {
             "bots"        "Morris Vern Gray Floyd"
             "minEnemies"  "4"
             "threshold"   "99"
-            "tasks"       "'killwith 2 sniper'"
+            "tasks"       "'killwith 2 shotgun'"
         }
 	
         // - start ------------------------------------------
