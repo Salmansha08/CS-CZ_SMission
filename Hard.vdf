@@ -1,7 +1,7 @@
 "CareerGame"
 {
     "InitialPoints"             "8"
-    "MatchWins"                 "4"
+    "MatchWins"                 "3"
     "MatchWinBy"                "2"
     "Characters"                "Weasel Lunatic Crackpot Outcast Madman Rat Screech Worm Splinter Freak Maniac Psycho Rebel Fiend Vandal Razor Bandit Raider Blade Nails Hammer Crank Cutter Fanatic Hyena Wolfhound Panther Crow Jackal Hawk Spider Snake"
 
@@ -9,11 +9,11 @@
     // If a value is not present or 0, that cost and higher are assumed to be always available.
     "CostAvailability"
     {
-	"1"						"1"
-	"2"						"1"
-	"3"						"1"
-	"4"						"14"
-	"5"						"14"
+	"1"						"2"
+	"2"						"4"
+	"3"						"8"
+	"4"						"16"
+	"5"						"24"
     }
 
    "Maps"
@@ -230,6 +230,31 @@
             "tasks"       "'kill 18' 'winfast 70'"
             "FriendlyFire"  "1"
         }
+	
+	// - extra --------------------------------------------
+        "cs_747"
+        {
+            "bots"        "Ben Eddie Kent Rooster Roger Sam Alex Jake Maverick"
+            "minEnemies"  "7"
+            "threshold"   "26"
+            "tasks"       "'kill 15' 'winfast 65'"
+            "FriendlyFire"  "1"
+        }
+        "as_oilrig"
+        {
+            "bots"        "Ben Eddie Kent Rooster Roger Maverick Alex Jake"
+            "minEnemies"  "8"
+            "threshold"   "26"
+            "tasks"       "'kill 18' 'killwith 4 m4a1' 'killwith 2 deagle'"
+            "FriendlyFire"  "1"
+        }
+        "de_vostok_cz"
+        {
+            "bots"        "Ben Eddie Kent Rooster Roger Sam Alex Jake Tex"
+            "minEnemies"  "8"
+            "threshold"   "26"
+            "tasks"       "'kill 18' 'kill 3 with aug' 'winfast 70'"
+            "FriendlyFire"  "1"
     }
 }
  
