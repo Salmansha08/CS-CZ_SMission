@@ -1,0 +1,217 @@
+"CareerGame"
+{
+    "InitialPoints"             "2"
+    "MatchWins"                 "3"
+    "MatchWinBy"                "2"
+    "Characters"                "Weasel Lunatic Crackpot Outcast Marvin Reaper Rat Screech Fred Pawn Splinter Freak Maniac Nutcase Rebel Fiend Vandal Crimson Deadshot Bloodhound Cutthroat Chaos Blade Nails Grump Torn Fanatic Titan Slug Viper Grim Hyena Wolf Panther Crow Brois Makarov Jackal Hawk Spider Snake Terminator Boris Fumbles Jan"
+
+	// CostAvailability: for each bot point cost, specify the number of reputation points needed to hire him.
+	// If a value is not present or 0, that cost and higher are assumed to be always available.
+	"CostAvailability"
+	{
+		"1"						"1"
+		"2"						"6"
+		"3"						"12"
+		"4"						"12"
+		"5"						"99"
+	}
+
+    "Maps"
+    {
+        // Maps are in triplets
+        // 'minEnemies' defines the minimum number of enemies of the map (from the 'bots' entry, left to right)
+        // 'threshold' defines the Reputation Point value above which one enemy is added for every additional RP until we run out of bots on the 'bots' line
+
+        // A note on tasks:
+        //
+        // tasks are one of the following:
+        //    kill         <N> [survive | inarow]
+        //    killwith     <N> <weapon> [survive | inarow]
+        //    killblind    <N> [survive | inarow]
+        //    winfast      <S> [survive | inarow]
+        //    headshot     <N> [survive | inarow]
+        //    headshotwith <N> <weapon> [survive | inarow]
+        //    killall
+        //    rescue       <N> [survive | inarow]
+        //    rescueall
+        //    injure       <N> [survive | inarow]
+        //    injurewith   <N> <weapon> [survive | inarow]
+        //
+        // tasks can contain a numeric value (# of kills, # of seconds, etc)
+        // tasks can contain a weapon name or weapon classname (for the killwith and headshotwith tasks)
+        // you can add "survive" so the player must survive to the end of the round to complete the task
+        // you can add "inarow" so the player must complete the task N times without dying (across round boundaries)
+        // group words of a task with '.  I.e. 'kill 3'
+        //
+        // Weapon names/classes are:
+        //    scout
+        //    xm1014
+        //    mac10
+        //    aug
+        //    ump45
+        //    sg550
+        //    galil
+        //    famas
+        //    awp
+        //    mp5
+        //    m249
+        //    m3
+        //    m4a1
+        //    tmp
+        //    sg552
+        //    ak47
+        //    p90
+        //    shield
+        //    weapon
+        //    knife
+        //    grenade (text is singular)
+        //    hegren  (text is plural, but the behavior is the same)
+        //    pistol
+        //    SMG
+        //    machinegun
+        //    shotgun
+        //    rifle
+        //    sniper
+        //    fn57
+        //    elites
+
+        // - start ------------------------------------------
+        "de_dust_cz"
+        {
+            "bots"        "Graig Vern Gray"
+            "minEnemies"  "3"
+            "threshold"   "99"
+            "tasks"       "'kill 2'"
+        }
+        "cs_office_cz"
+        {
+            "bots"        "Graig Vern Gray Floyd"
+            "minEnemies"  "4"
+            "threshold"   "99"
+            "tasks"       "'killwith 2 SMG' 'winfast 75'"
+        }
+        "de_prodigy_cz"
+        {
+            "bots"        "Graig Vern Gray Floyd"
+            "minEnemies"  "4"
+            "threshold"   "99"
+            "tasks"       "'killwith 1 sniper'"
+        }
+
+        // - early -------------------------------------------
+        "de_tides_cz"
+        {
+            "bots"        "Graig Vern Gray Morris"
+            "minEnemies"  "4"
+            "threshold"   "99"
+            "tasks"       "'killwith 2 shotgun' 'winfast 90'"
+        }
+        "cs_italy_cz"
+        {
+            "bots"        "Graig Vern Gray Morris Yuri"
+            "minEnemies"  "5"
+            "threshold"   "99"
+            "tasks"       "'killwith 2 sniper'"
+        }
+        "de_inferno_cz"
+        {
+            "bots"        "Graig Vern Gray Morris Yuri"
+            "minEnemies"  "5"
+            "threshold"   "99"
+            "tasks"       "'killwith 2 rifle'"
+        }
+
+        // - halfway -----------------------------------------
+        "de_dust2_cz"
+        {
+            "bots"        "Graig Vern Gray Morris Yuri"
+            "minEnemies"  "5"
+            "threshold"   "99"
+            "tasks"       "'killwith 2 sniper' 'winfast 90'"
+        }
+        "cs_militia_cz"
+        {
+            "bots"        "Graig Vern Gray Morris Yuri"
+            "minEnemies"  "5"
+            "threshold"   "99"
+            "tasks"       "'killwith 2 SMG'"
+        }
+        "de_stadium_cz"
+        {
+            "bots"        "Graig Vern Gray Morris Yuri"
+            "minEnemies"  "5"
+            "threshold"   "99"
+            "tasks"       "'killwith 2 galil' 'winfast 90'"
+        }
+
+        // - halfway ----------------------------------------
+        "de_chateau_cz"
+        {
+            "bots"        "Graig Vern Gray Morris Yuri Leon"
+            "minEnemies"  "6"
+            "threshold"   "99"
+            "tasks"       "'killwith 2 m249'"
+        }
+        "cs_havana_cz"
+        {
+            "bots"        "Graig Vern Gray Morris Yuri Leon"
+            "minEnemies"  "6"
+            "threshold"   "99"
+            "tasks"       "'killwith 2 galil'"
+        }
+        "de_cbble_cz"
+        {
+            "bots"        "Graig Vern Gray Morris Stanley Leon"
+            "minEnemies"  "6"
+            "threshold"   "99"
+            "tasks"       "'killwith 2 sniper' 'winfast 90'"
+        }
+
+        // - late -------------------------------------------
+        "de_aztec_cz"
+        {
+            "bots"        "Graig Vern Gray Morris Stanley Leon"
+            "minEnemies"  "6"
+            "threshold"   "99"
+            "tasks"       "'kill 3' 'killwith 2 sniper' 'winfast 90'"
+        }
+        "cs_downed_cz"
+        {
+            "bots"        "Graig Vern Gray Morris Stanley Leon"
+            "minEnemies"  "6"
+            "threshold"   "99"
+            "tasks"       "'kill 3' 'killwith 2 rifle'"
+        }
+        "de_airstrip_cz"
+        {
+            "bots"        "Graig Vern Gray Morris Stanley Roger"
+            "minEnemies"  "6"
+            "threshold"   "99"
+            "tasks"       "'kill 3' 'killwith 2 SMG'"
+        }
+
+        // - end --------------------------------------------
+        "de_piranesi_cz"
+        {
+            "bots"        "Graig Vern Gray Morris Stanley Roger"
+            "minEnemies"  "6"
+            "threshold"   "99"
+            "tasks"       "'kill 5' 'killwith 3 sg552'"
+        }
+        "de_fastline_cz"
+        {
+            "bots"        "Graig Vern Gray Morris Stanley Roger"
+            "minEnemies"  "6"
+            "threshold"   "99"
+            "tasks"       "'kill 6' 'killwith 3 SMG'"
+        }
+        "de_torn_cz"
+        {
+            "bots"        "Graig Vern Gray Morris Stanley Roger"
+            "minEnemies"  "6"
+            "threshold"   "99"
+            "tasks"       "'kill 7' 'killwith 3 sniper'"
+        }
+    }
+}
+ 

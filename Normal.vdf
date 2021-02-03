@@ -1,0 +1,217 @@
+"CareerGame"
+{
+    "InitialPoints"             "3"
+    "MatchWins"                 "3"
+    "MatchWinBy"                "2"
+    "Characters"                "Weasel Lunatic Crackpot Outcast Marvin Reaper Rat Screech Fred Pawn Splinter Freak Maniac Nutcase Rebel Fiend Vandal Crimson Deadshot Bloodhound Cutthroat Chaos Blade Nails Grump Torn Fanatic Titan Slug Viper Grim Hyena Wolf Panther Crow Brois Makarov Jackal Hawk Spider Snake Terminator Boris Fumbles"
+
+	// CostAvailability: for each bot point cost, specify the number of reputation points needed to hire him.
+	// If a value is not present or 0, that cost and higher are assumed to be always available.
+	"CostAvailability"
+	{
+		"1"						"1"
+		"2"						"6"
+		"3"						"10"
+		"4"						"15"
+		"5"						"15"
+	}
+
+    "Maps"
+    {
+        // Maps are in triplets
+        // 'minEnemies' defines the minimum number of enemies of the map (from the 'bots' entry, left to right)
+        // 'threshold' defines the Reputation Point value above which one enemy is added for every additional RP until we run out of bots on the 'bots' line
+
+        // A note on tasks:
+        //
+        // tasks are one of the following:
+        //    kill         <N> [survive | inarow]
+        //    killwith     <N> <weapon> [survive | inarow]
+        //    killblind    <N> [survive | inarow]
+        //    winfast      <S> [survive | inarow]
+        //    headshot     <N> [survive | inarow]
+        //    headshotwith <N> <weapon> [survive | inarow]
+        //    killall
+        //    rescue       <N> [survive | inarow]
+        //    rescue 4
+        //    injure       <N> [survive | inarow]
+        //    injurewith   <N> <weapon> [survive | inarow]
+        //
+        // tasks can contain a numeric value (# of kills, # of seconds, etc)
+        // tasks can contain a weapon name or weapon classname (for the killwith and headshotwith tasks)
+        // you can add "survive" so the player must survive to the end of the round to complete the task
+        // you can add "inarow" so the player must complete the task N times without dying (across round boundaries)
+        // group words of a task with '.  I.e. 'kill 3'
+        //
+        // Weapon names/classes are:
+        //    scout
+        //    xm1014
+        //    mac10
+        //    aug
+        //    ump45
+        //    sg550
+        //    galil
+        //    famas
+        //    awp
+        //    mp5
+        //    m249
+        //    m3
+        //    m4a1
+        //    tmp
+        //    sg552
+        //    ak47
+        //    p90
+        //    shield
+        //    weapon
+        //    knife
+        //    grenade (text is singular)
+        //    hegren  (text is plural, but the behavior is the same)
+        //    pistol
+        //    SMG
+        //    machinegun
+        //    shotgun
+        //    rifle
+        //    sniper
+        //    fn57
+        //    elites
+
+        // - start ------------------------------------------
+        "de_dust_cz"
+        {
+            "bots"        "Morris Graig Yuri Pete"
+            "minEnemies"  "4"
+            "threshold"   "99"
+            "tasks"       "'kill 5' 'kill 1 survive' 'winfast 75'"
+        }
+        "cs_office_cz"
+        {
+            "bots"        "Morris Graig Yuri Pete Stanley"
+            "minEnemies"  "5"
+            "threshold"   "99"
+            "tasks"       "'kill 6' 'killwith 3 SMG'"
+        }
+        "de_prodigy_cz"
+        {
+            "bots"        "Morris Graig Yuri Pete Stanley"
+            "minEnemies"  "5"
+            "threshold"   "99"
+            "tasks"       "'kill 6' 'killwith 2 sniper survive' 'winfast 75'"
+        }
+
+        // - early -------------------------------------------
+        "de_tides_cz"
+        {
+            "bots"        "Morris Graig Yuri Ben Stanley"
+            "minEnemies"  "5"
+            "threshold"   "99"
+            "tasks"       "'kill 6' 'killwith 2 shotgun' 'winfast 75' 'plant 1'"
+        }
+        "cs_italy_cz"
+        {
+            "bots"        "Morris Graig Yuri Ben Stanley"
+            "minEnemies"  "5"
+            "threshold"   "99"
+            "tasks"       "'kill 6' 'killwith 2 awp' 'winfast 75'"
+        }
+        "de_inferno_cz"
+        {
+            "bots"        "Morris Graig Yuri Ben Stanley"
+            "minEnemies"  "5"
+            "threshold"   "99"
+            "tasks"       "'kill 6' 'killwith 1 sg552 survive' 'killwith 1 deagle'"
+        }
+
+        // - halfway -----------------------------------------
+        "de_dust2_cz"
+        {
+            "bots"        "Morris Graig Ned Ben Stanley Scout"
+            "minEnemies"  "6"
+            "threshold"   "99"
+            "tasks"       "'kill 7' 'killwith 2 g3sg1 inarow' 'winfast 75'"
+        }
+        "cs_militia_cz"
+        {
+            "bots"        "Morris Graig Ned Ben Stanley"
+            "minEnemies"  "5"
+            "threshold"   "99"
+            "tasks"       "'kill 7' 'killwith 2 SMG inarow' 'defendhostages 1'"
+        }
+        "de_stadium_cz"
+        {
+            "bots"        "Morris Graig Ned Ben Stanley Owl"
+            "minEnemies"  "6"
+            "threshold"   "99"
+            "tasks"       "'kill 7' 'killwith 3 sg552' 'winfast 75' 'plant 1 survive'"
+        }
+
+        // - halfway ----------------------------------------
+        "de_chateau_cz"
+        {
+            "bots"        "Morris Graig Ned Ben Stanley Owl"
+            "minEnemies"  "6"
+            "threshold"   "99"
+            "tasks"       "'kill 7' 'killwith 3 m249' 'plant 2 inarow'"
+        }
+        "cs_havana_cz"
+        {
+            "bots"        "Morris Graig Ned Ben Stanley Gallus"
+            "minEnemies"  "6"
+            "threshold"   "99"
+            "tasks"       "'kill 7' 'killwith 2 ak47 survive'"
+        }
+        "de_cbble_cz"
+        {
+            "bots"        "Morris Graig Ned Ben Stanley Gallus"
+            "minEnemies"  "6"
+            "threshold"   "99"
+            "tasks"       "'kill 8' 'killwith 3 awp' 'winfast 75 survive'"
+        }
+
+        // - late -------------------------------------------
+        "de_aztec_cz"
+        {
+            "bots"        "Morris Graig Ned Mac Stanley Gallus"
+            "minEnemies"  "6"
+            "threshold"   "99"
+            "tasks"       "'kill 10' 'killwith 3 awp' 'winfast 70'"
+        }
+        "cs_downed_cz"
+        {
+            "bots"        "Morris Graig Ned Mac Stanley Gallus"
+            "minEnemies"  "6"
+            "threshold"   "99"
+            "tasks"       "'kill 8' 'killwith 3 galil'"
+        }
+        "de_airstrip_cz"
+        {
+            "bots"        "Morris Graig Ned Mac Stanley Gallus"
+            "minEnemies"  "6"
+            "threshold"   "99"
+            "tasks"       "'kill 10' 'killwith 2 g3sg1 inarow' 'preventdefuse 1 survive'"
+        }
+
+        // - end --------------------------------------------
+        "de_piranesi_cz"
+        {
+            "bots"        "Morris Graig Ned Knight Stanley Rex"
+            "minEnemies"  "6"
+            "threshold"   "99"
+            "tasks"       "'kill 12' 'killwith 2 sg552' 'killwith 1 deagle survive'"
+        }
+        "de_fastline_cz"
+        {
+            "bots"        "Morris Graig Ned Knight Stanley Rex"
+            "minEnemies"  "6"
+            "threshold"   "99"
+            "tasks"       "'kill 12' 'killwith 3 p90' 'winfast 75'"
+        }
+        "de_torn_cz"
+        {
+            "bots"        "Morris Graig Ned Knight Stanley Rex Jackie"
+            "minEnemies"  "7"
+            "threshold"   "99"
+            "tasks"       "'kill 15' 'killwith 4 awp' 'preventdefuse 1 survive'"
+        }
+    }
+}
+ 

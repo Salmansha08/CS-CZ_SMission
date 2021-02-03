@@ -1,0 +1,16 @@
+"MissionPack"
+{
+  "Author"      "TheMrGhostMan"
+  "Title"       "Tour To Destruction ReBalanced!"
+  "Description" "This version of Tour To Destruction has been reworked to have better overall 'balance' of the campaign."
+  "URL"         "www.gamebanana.com"
+  "SoloPlay"	"1"
+  "CoopPlay"	"0"
+  "Team"	"T"
+  "BGColor1"	"47 62 90"
+  "BGColor2"	"0 0 0"
+  "TextColor"	"255 255 255"
+
+  "BotProfile"  "BotTRBProfile.db"
+}
+ 
